@@ -47,7 +47,8 @@ class report_editdates_form extends moodleform {
         $course        = $this->_customdata['course'];
         $activitytype  = $this->_customdata['activitytype'];
 
-        $coursehasavailability = !empty($CFG->enableavailability);
+        //$coursehasavailability = !empty($CFG->enableavailability);
+        $coursehasavailability = false;         //Not available in 2.8
         $coursehascompletion   = !empty($CFG->enablecompletion) && !empty($course->enablecompletion);
 
         // Context instance of the course.
